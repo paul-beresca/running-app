@@ -55,4 +55,9 @@ export class AppComponent implements AfterViewInit {
     this.classifier.addExample(activation, classId);
     img.dispose();
   }
+
+  startGame() {
+    event = new CustomEvent('startGame');
+    window.dispatchEvent(event);
+  }
 }
