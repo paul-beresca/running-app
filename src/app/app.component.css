@@ -1,0 +1,22 @@
+video {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.trainingArea {
+  display: inline-flex;
+}
+
+.trainingButtons {
+  width: 90px;
+  margin-top: 40px;
+  margin-left: 30px;
+}
+
+button {
+  width: 85px;
+  height: 40px;
+  background-color: dodgerblue;
+  border-style: none;
+  margin-bottom: 5px;
+}

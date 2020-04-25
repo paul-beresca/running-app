@@ -1,11 +1,32 @@
-<!-- <button> LEFT </button>
-<button> RIGHT </button>
-<button> UP </button>
-<button> DOWN </button> -->
-<div>
-  <img id="img" #myImage crossorigin src="https://i.imgur.com/JlUvsxa.jpg" width="227" height="227"/>
-  <div>This image should have:</div>
-  <div *ngFor='let prediction of predictionList'>
-    Class found: {{ prediction.className }} with the probability of {{ prediction.probability }}
+<div class="trainingArea">
+  <div>
+    <video
+      #myWebcam
+      autoplay
+      playsinline
+      muted
+      id="webcam"
+      width="800"
+      height="800"
+    ></video>
   </div>
+  <div class="trainingButtons">
+    <button (click)="addExample('left')">LEFT</button>
+    <button (click)="addExample('right')">RIGHT</button>
+    <button (click)="addExample('shoot')">SHOOT</button>
+    <button (click)="addExample('nothing')">NOTHING</button>
+  </div>
+</div>
+<div>
+  COMMAND:
+  {{ predictionObject ? predictionObject.label.toUpperCase() : "None" }}
+</div>
+
+<link
+  href="http://fonts.googleapis.com/css?family=Bangers"
+  rel="stylesheet"
+  type="text/css"
+/>
+<div id="container">
+  <canvas id="game" width="320" height="720"></canvas>
 </div>
