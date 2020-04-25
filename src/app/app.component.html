@@ -1,0 +1,11 @@
+<!-- <button> LEFT </button>
+<button> RIGHT </button>
+<button> UP </button>
+<button> DOWN </button> -->
+<div>
+  <img id="img" #myImage crossorigin src="https://i.imgur.com/JlUvsxa.jpg" width="227" height="227"/>
+  <div>This image should have:</div>
+  <div *ngFor='let prediction of predictionList'>
+    Class found: {{ prediction.className }} with the probability of {{ prediction.probability }}
+  </div>
+</div>
