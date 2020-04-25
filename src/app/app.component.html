@@ -16,17 +16,11 @@
     <button (click)="addExample('shoot')">SHOOT</button>
     <button (click)="addExample('nothing')">NOTHING</button>
   </div>
+  <div id="container">
+    <canvas id="game" width="320" height="720"></canvas>
+  </div>
 </div>
 <div>
   COMMAND:
   {{ predictionObject ? predictionObject.label.toUpperCase() : "None" }}
-</div>
-
-<link
-  href="http://fonts.googleapis.com/css?family=Bangers"
-  rel="stylesheet"
-  type="text/css"
-/>
-<div id="container">
-  <canvas id="game" width="320" height="720"></canvas>
 </div>
